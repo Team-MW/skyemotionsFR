@@ -75,11 +75,11 @@ export default async function PaiementSuccessPage({ searchParams }: Props) {
             Dernière étape
           </p>
           <h1 className="font-display mt-3 text-3xl font-bold uppercase tracking-wide text-white sm:text-4xl">
-            Données du saut
+            Formulaire obligatoire
           </h1>
           <p className="mt-3 text-white/60">
-            Ton paiement est confirmé. Complète le formulaire pour que nous organisons
-            ton expérience.
+            Ton paiement est confirmé. Tu dois maintenant compléter ce formulaire
+            pour que nous organisons ton expérience.
           </p>
         </div>
         <PostPaymentBookingForm session={session} />
