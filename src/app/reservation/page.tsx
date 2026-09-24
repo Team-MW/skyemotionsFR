@@ -7,14 +7,14 @@ import SiteShell from "@/components/SiteShell";
 export const metadata: Metadata = {
   title: "Réservation",
   description:
-    "Réserve un saut tandem + vidéo dès 269€ ou vidéo + photos 349€. Ajoute au panier et paie quand tu veux.",
+    "Réserve un saut tandem dès 299€ ou vidéo + photos 399€. Ajoute au panier et paie quand tu veux.",
 };
 
 const STEPS = [
   {
     n: "01",
     title: "Choisis ton pack",
-    text: "Tandem + vidéo, ou tandem + vidéo + photos.",
+    text: "Saut tandem (299€), tandem + vidéo + photos (399€), ou saut VIP (999€).",
   },
   {
     n: "02",
@@ -39,7 +39,7 @@ export default function ReservationPage() {
       />
 
       <section className="border-b border-white/5 bg-background px-4 py-14 sm:px-6 sm:py-20">
-        <ProductCards />
+        <ProductCards ids={["saut-tandem-video", "saut-tandem-video-photos", "saut-vip"]} />
       </section>
 
       <section className="border-b border-white/5 bg-surface px-4 py-14 sm:px-6 sm:py-16">

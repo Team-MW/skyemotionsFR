@@ -7,7 +7,7 @@ import SiteShell from "@/components/SiteShell";
 export const metadata: Metadata = {
   title: "Bons cadeaux",
   description:
-    "Offre un saut Sky Emotions : tandem + vidéo 269€ ou vidéo + photos 349€.",
+    "Offre un saut Sky Emotions : tandem + vidéo 299€ ou vidéo + photos 399€.",
 };
 
 export default function BonsCadeauxPage() {
@@ -20,7 +20,7 @@ export default function BonsCadeauxPage() {
         cta={{ label: "Voir le panier", href: "/checkout" }}
       />
       <section className="bg-background px-4 py-14 sm:px-6 sm:py-20">
-        <ProductCards />
+        <ProductCards ids={["saut-tandem-video", "saut-tandem-video-photos", "saut-vip"]} />
         <p className="mx-auto mt-10 max-w-xl text-center text-sm text-white/50">
           Tu préfères nous parler ?{" "}
           <Link href="/contact" className="text-accent hover:underline">

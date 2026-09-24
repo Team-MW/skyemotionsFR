@@ -7,12 +7,16 @@ export type NavItem = {
 export const NAV_ITEMS: NavItem[] = [
   { label: "ACCUEIL", href: "/" },
   { label: "RÉSERVATION", href: "/reservation" },
+  { label: "INITIATION AU VOL", href: "/initiation-vol" },
   {
     label: "BONS CADEAUX",
     href: "/bons-cadeaux",
     children: [
-      { label: "Tandem + vidéo 269€", href: "/tarifs" },
-      { label: "Vidéo + photos 349€", href: "/tarifs" },
+      { label: "Formule Découverte 299€", href: "/tarifs" },
+      { label: "Formule Souvenir 399€", href: "/tarifs" },
+      { label: "Expérience VIP 999€", href: "/tarifs" },
+      { label: "Initiation Avion Cessna 390€", href: "/initiation-vol" },
+      { label: "Initiation Hélico R22/R44", href: "/initiation-vol" },
     ],
   },
   { label: "TARIFS", href: "/tarifs" },
@@ -32,6 +36,7 @@ export const NAV_ITEMS: NavItem[] = [
 
 export const FOOTER_LINKS = [
   { label: "Réservation", href: "/reservation" },
+  { label: "Initiation au vol", href: "/initiation-vol" },
   { label: "Bons cadeaux", href: "/bons-cadeaux" },
   { label: "Tarifs", href: "/tarifs" },
   { label: "Le centre", href: "/le-centre" },

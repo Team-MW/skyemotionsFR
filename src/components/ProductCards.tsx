@@ -70,8 +70,16 @@ export default function ProductCards({ ids }: ProductCardsProps) {
     ? CATALOG.filter((p) => ids.includes(p.id))
     : CATALOG;
 
+  const isThree = products.length === 3;
+
   return (
-    <div className="mx-auto grid max-w-[900px] gap-5 md:grid-cols-2 md:gap-6">
+    <div
+      className={`mx-auto grid gap-5 md:gap-6 ${
+        isThree
+          ? "max-w-[1200px] md:grid-cols-2 lg:grid-cols-3"
+          : "max-w-[900px] md:grid-cols-2"
+      }`}
+    >
       {products.map((product) => (
         <PricingCard
           key={product.id}

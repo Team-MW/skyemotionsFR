@@ -1,5 +1,6 @@
 import ExperienceResumen from "@/components/ExperienceResumen";
 import Hero from "@/components/Hero";
+import InitiationVolSection from "@/components/InitiationVolSection";
 import JoinUs from "@/components/JoinUs";
 import PartnersMarquee from "@/components/PartnersMarquee";
 import Requisitos from "@/components/Requisitos";
@@ -16,6 +17,7 @@ export default function Home() {
       <PartnersMarquee />
       <TandemExperience />
       <ExperienceResumen />
+      <InitiationVolSection />
       <JoinUs />
       <Requisitos />
       <Reviews />
