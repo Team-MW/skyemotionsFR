@@ -5,13 +5,18 @@ import type { PaidSessionView } from "@/lib/booking-types";
 export function getStripe(): Stripe | null {
   const secret = process.env.STRIPE_SECRET_KEY;
   if (!secret) return null;
-  return new Stripe(secret);
+  return new Stripe(secret, {
+    apiVersion: "2026-08-26.dahlia",
+  });
 }
 
 export function getSiteUrl() {
+  if (process.env.NODE_ENV === "development") {
+    return "http://localhost:3000";
+  }
   return (
     process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
-    "http://127.0.0.1:3000"
+    "http://localhost:3000"
   );
 }
 
