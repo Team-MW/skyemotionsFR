@@ -5,6 +5,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useCart } from "@/context/CartContext";
 import { formatEUR } from "@/lib/catalog";
 import type { PaidSessionView } from "@/lib/booking-types";
+import AfiflyBookingForm from "./AfiflyBookingForm";
 
 const JOTFORM_ID = "262654050523350";
 
@@ -28,6 +29,7 @@ function isJotformSubmission(data: unknown): boolean {
 export default function PostPaymentBookingForm({ session }: Props) {
   const { clear } = useCart();
   const [sent, setSent] = useState(session.bookingComplete);
+  const [afiflyComplete, setAfiflyComplete] = useState(session.bookingComplete);
   const [iframeHeight, setIframeHeight] = useState(1200);
 
   const formSrc = useMemo(() => {
@@ -149,20 +151,24 @@ export default function PostPaymentBookingForm({ session }: Props) {
         </p>
       </div>
 
-      <div className="overflow-hidden border border-white/10 bg-white">
-        <iframe
-          id={`JotFormIFrame-${JOTFORM_ID}`}
-          title="Formulaire de réservation Sky Emotions"
-          src={formSrc}
-          allow="geolocation; microphone; camera; fullscreen"
-          style={{
-            width: "100%",
-            minWidth: "100%",
-            height: iframeHeight,
-            border: "none",
-          }}
-          scrolling="no"
-        />
+      <div className={`overflow-hidden border border-white/10 ${afiflyComplete ? 'bg-white' : ''}`}>
+        {!afiflyComplete ? (
+          <AfiflyBookingForm session={session} onSuccess={() => setAfiflyComplete(true)} />
+        ) : (
+          <iframe
+            id={`JotFormIFrame-${JOTFORM_ID}`}
+            title="Formulaire de réservation Sky Emotions"
+            src={formSrc}
+            allow="geolocation; microphone; camera; fullscreen"
+            style={{
+              width: "100%",
+              minWidth: "100%",
+              height: iframeHeight,
+              border: "none",
+            }}
+            scrolling="no"
+          />
+        )}
       </div>
     </div>
   );
