@@ -62,8 +62,9 @@ export default function InitiationVolSection() {
                 alt="Avion Cessna 182 Turbo RG - Initiation au pilotage"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
+                quality={90}
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                priority
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#222222] via-black/20 to-transparent" />
               
@@ -145,8 +146,9 @@ export default function InitiationVolSection() {
                 alt="Hélicoptère Robinson R22 R44 - Initiation au pilotage"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
+                quality={90}
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                priority
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#222222] via-black/20 to-transparent" />
 

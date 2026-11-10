@@ -9,7 +9,6 @@ export default function Hero() {
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
-    video.load();
     const play = video.play();
     if (play) play.catch(() => {});
   }, []);
@@ -23,7 +22,7 @@ export default function Hero() {
         muted
         loop
         playsInline
-        preload="auto"
+        preload="metadata"
         poster="/images/hero-poster.jpg"
         aria-hidden
       >

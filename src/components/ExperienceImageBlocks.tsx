@@ -55,6 +55,7 @@ export default function ExperienceImageBlocks() {
               fill
               className="object-cover transition duration-500 group-hover:scale-[1.04]"
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+              quality={90}
             />
           </div>
           <div className="flex flex-1 flex-col px-4 py-5 text-center sm:px-5">

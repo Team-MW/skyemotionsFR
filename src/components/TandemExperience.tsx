@@ -82,6 +82,7 @@ export default function TandemExperience() {
                   alt={step.imageAlt}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
+                  quality={90}
                   className="object-cover"
                 />
                 <div
